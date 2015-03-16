@@ -665,6 +665,7 @@ GameManager.prototype = {
 		setTimeout(function(){
 
 			$('#down').css('display', 'block').addClass('boom-animation');
+			//debugger
 
 			_self.soundManager.playSound('fail');
 
@@ -1066,7 +1067,7 @@ GameManager.prototype = {
 				pageManager.showPage(pageName);
 
 				$('.content_text_img').find('img').attr('src',endImgs[index]);
-				
+
 				var images = ['imgs/s0.png', 'imgs/s1.png', 'imgs/s2.png', 'imgs/s3.png', 'imgs/s4.png', 'imgs/s5.png', 'imgs/s6.png', 'imgs/s7.png', 'imgs/s8.png', 'imgs/s9.png']
 
 				$('#endScore').find('img').eq(0).attr('src', images[bai]);
