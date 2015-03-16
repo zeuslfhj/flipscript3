@@ -1409,19 +1409,32 @@ left: 38px;
     background-position: top;
 }
 .download_button {
-    width: 34%;
-    height: 56px;
-    left: 50%;
-    margin-left: -17%;
-    position: absolute;
+  width: 55%;
+  height: 104px;
+  left: 50%;
+  margin-left: -25%;
+  position: absolute;
 }
 
+.download_title {
+  width: 100%;
+  height: 180px;
+  left: 50%;
+  top: 20px;
+  position: absolute;
+  background: url(imgs/download_title.png);
+  margin-left: -50%;
+}
+
+
 .download_button_ios{
-    top: 157px;
+    top: 216px;
+    background: url(imgs/download_button1.png);
 }
 
 .download_button_and{
-    top: 244px;
+    top: 330px;
+    background: url(imgs/download_button2.png);
 }
 
 .download_cover{
