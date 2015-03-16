@@ -523,6 +523,12 @@ GameManager.prototype = {
 
 			this.success();
 
+			setTimeout(function(){
+
+				$('#knife').addClass('stop'); //刀停止
+
+			},0)
+
 		} else if ((this.position * this.count) < (this.whole * 1000 / this.speed) * this.per) {
 
 			this.end = true;
@@ -580,13 +586,6 @@ GameManager.prototype = {
 	},
 	//接到刀后随机显示四种提示
 	stopKnife: function() {
-
-		setTimeout(function() {
-
-			$('#knife').addClass('stop');
-
-		}, 10);
-
 
 		var positionXMiddle = window.innerWidth / 2;
 		var positionYMiddle = window.innerHeight / 2;
@@ -707,6 +706,7 @@ GameManager.prototype = {
 			"end_content1.png",
 			"end_content2.png",
 			"end_content3.png",
+			"end_content4.png",
 			"end_numbers.png",
 			"end_numbers2.png",
 			"end_official_link.png",
@@ -1025,14 +1025,14 @@ GameManager.prototype = {
 				var pageName;
 				var scoreValue = Math.abs(gameManager.score);
 				pageName = 'end';
-				var index = 0
+				var index = 0;
 					
-				if (scoreValue >= 15) {
+				if (scoreValue > 15) {
 
 					window.shareContent = window.highShareContent;
 					index=3;
 
-				} else if (scoreValue< 15 && scoreValue> 10) {
+				} else if (scoreValue<= 15 && scoreValue>10) {
 
 					window.shareContent = window.middleShareContent;
 					index=2;
@@ -1044,6 +1044,7 @@ GameManager.prototype = {
 
 				}
 
+				var endImgs = ['imgs/end_content1.png','imgs/end_content2.png','imgs/end_content3.png','imgs/end_content4.png'];
 				var resultText= [];
 
 				console.log('score:'+scoreValue)
@@ -1059,10 +1060,13 @@ GameManager.prototype = {
 					shi = parseInt((scoreValue - 100) / 10);
 					ge = scoreValue % 10;
 				}
+				console.log(endImgs[index],$('.content_text_img').find('img'))
 
-				console.log(bai,shi,ge);
+
 				pageManager.showPage(pageName);
 
+				$('.content_text_img').find('img').attr('src',endImgs[index]);
+				
 				var images = ['imgs/s0.png', 'imgs/s1.png', 'imgs/s2.png', 'imgs/s3.png', 'imgs/s4.png', 'imgs/s5.png', 'imgs/s6.png', 'imgs/s7.png', 'imgs/s8.png', 'imgs/s9.png']
 
 				$('#endScore').find('img').eq(0).attr('src', images[bai]);
