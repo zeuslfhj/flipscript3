@@ -338,7 +338,7 @@ GameManager.prototype = {
 		} else {
 
 			this.per = 0.77;
-			this.bottomFix = 0.95
+			this.bottomFix = 1
 
 		}
 

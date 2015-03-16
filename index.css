@@ -1417,24 +1417,21 @@ left: 38px;
 }
 
 .download_title {
-  width: 100%;
+  width: 80%;
   height: 180px;
   left: 50%;
   top: 20px;
   position: absolute;
-  background: url(imgs/download_title.png);
-  margin-left: -50%;
+  margin-left: -40%;
 }
 
 
 .download_button_ios{
     top: 216px;
-    background: url(imgs/download_button1.png);
 }
 
 .download_button_and{
-    top: 330px;
-    background: url(imgs/download_button2.png);
+    top: 344px;
 }
 
 .download_cover{
