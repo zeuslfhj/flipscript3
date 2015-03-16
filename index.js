@@ -747,7 +747,10 @@ GameManager.prototype = {
 			"s8.png",
 			"s9.png",
 			"count-notice.png",
-			"download.jpg"
+			"download.jpg",
+			"download_title.png",
+			"download_button1.png",
+			"download_button2.png"
 		];
 
 		var audioSrcs = [
@@ -1105,7 +1108,23 @@ GameManager.prototype = {
 		};
 	};
 
+	 var getUrlParam = function (name, url) {
+        var reg = new RegExp("(?:^|&)" + name + "=([^&]*)(&|$)");
+        var qs = url ? url.split('?')[1] : window.location.search.substr(1);
+        var r = qs.match(reg);
+        if (r != null) {
+            try {
+                res = decodeURIComponent(r[1]);
+            } catch (e) {
+                res = r[1];
+            }
+            return res
+        }
+        return null;
+    }
+
 	var init = function(loadedAudios) {
+
 		var soundsMap = generateSoundsMap(loadedAudios);
 		var templateStrMap = generateTemplates();
 
@@ -1113,6 +1132,7 @@ GameManager.prototype = {
 
 		var soundManager = new SoundManager(soundsMap);
 		var pageManager = new PageManager(templateStrMap, $mainContainer);
+
 		var gameManagerCallbacks = generateGameCallbacks(pageManager);
 		var gameManager = new GameManager(gameManagerCallbacks, soundManager);
 		var eventMap = generateEvtMap(pageManager, gameManager, soundManager);
@@ -1121,6 +1141,14 @@ GameManager.prototype = {
 
 		soundManager.playBGMusic();
 		pageManager.addEventMap(eventMap);
+
+		console.log(getUrlParam('download'))
+		if(getUrlParam('download')){
+			
+			pageManager.show('download');
+			
+			return
+		}		
 		//开始
 		pageManager.show('index', start);
 
