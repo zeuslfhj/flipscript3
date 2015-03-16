@@ -637,7 +637,7 @@ GameManager.prototype = {
 			//_self.speed += 1;
 			_self.run();
 
-		}, 3000)
+		}, 1200)
 
 
 	},
@@ -1020,17 +1020,17 @@ GameManager.prototype = {
 				pageName = 'end';
 				var index = 0
 					
-				if (scoreValue >= 75) {
+				if (scoreValue >= 15) {
 
 					window.shareContent = window.highShareContent;
 					index=3;
 
-				} else if (scoreValue< 75 && scoreValue> 50) {
+				} else if (scoreValue< 15 && scoreValue> 10) {
 
 					window.shareContent = window.middleShareContent;
 					index=2;
 
-				} else if (scoreValue <=50 && scoreValue>25) {
+				} else if (scoreValue <=10 && scoreValue>5) {
 
 					window.shareContent = window.lowShareContent;
 					index=1;
