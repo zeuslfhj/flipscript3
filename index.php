@@ -169,7 +169,11 @@ $signPackage = $jssdk->GetSignPackage();
     </div>
    </div>
    <div id="download">
-    <div class="download_template"></div>
+    <div class="download_template">
+      <div class="download_button download_button_ios"></div>
+      <div class="download_button download_button_and"></div>
+      <div id="download_cover" class="download_cover"></div>
+    </div>
    </div>
   </div>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
