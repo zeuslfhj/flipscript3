@@ -222,7 +222,7 @@ $signPackage = $jssdk->GetSignPackage();
     });
 
     wx.onMenuShareAppMessage({
-        title: '守操如玉，不如一撸到底', // 分享标题
+        title: '武学绝活，空手接白刃', // 分享标题
         desc: shareContent, // 分享描述
         link: 'http://shileng3.flipscript.com.cn/src/index.php', // 分享链接
         imgUrl: 'http://shileng3.flipscript.com.cn/src/imgs/share_icon.jpg', // 分享图标
