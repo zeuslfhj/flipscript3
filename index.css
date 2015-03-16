@@ -2194,7 +2194,7 @@ transform-origin: 0 100%;
   0% {
   }
   100% {
-    -webkit-transform: rotate(20deg) translate(60px,140px);
+    -webkit-transform: rotate(30deg) translate(60px,140px);
   }
 }
 
@@ -2204,7 +2204,7 @@ transform-origin: 0 100%;
 
   }
   100% {
-    -webkit-transform: rotate(40deg) translate(60px,140px);
+    -webkit-transform: rotate(30deg) translate(60px,140px);
   }
 }
 

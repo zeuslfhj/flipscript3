@@ -323,18 +323,22 @@ GameManager.prototype = {
 
 		if (innerHeight < 670 && innerHeight > 570) {
 
-			this.per = 0.74;
+			this.per = 0.77;
+			this.bottomFix = 0.95;
 		} else if (innerHeight < 570 && innerHeight > 488) {
 
-			this.per = 0.64;
+			this.per = 0.68;
+			this.bottomFix = 0.9;
 
 		} else if (innerHeight <= 488) {
 
-			this.per = 0.50;
+			this.per = 0.55;
+			this.bottomFix = 0.85;
 
 		} else {
 
 			this.per = 0.77;
+			this.bottomFix = 0.95
 
 		}
 
@@ -513,7 +517,7 @@ GameManager.prototype = {
 		$('#hand1').css('display', 'block');
 		$('#hand2').css('display', 'block');
 
-		if ((this.position * this.count) < (this.whole * 1000 / this.speed) && (this.position * this.count) >= (this.whole * 1000 / this.speed) * this.per) {
+		if ((this.position * this.count) < (this.whole * 1000 / this.speed)*this.bottomFix && (this.position * this.count) >= (this.whole * 1000 / this.speed) * this.per) {
 
 			clearInterval(this.timer);
 
