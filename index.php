@@ -170,6 +170,7 @@ $signPackage = $jssdk->GetSignPackage();
    </div>
    <div id="download">
     <div class="download_template">
+      <div class="download_title"></div>
       <div class="download_button download_button_ios"></div>
       <div class="download_button download_button_and"></div>
       <div id="download_cover" class="download_cover"></div>
