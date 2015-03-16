@@ -1342,22 +1342,28 @@ left: 38px;
 /************************ common end page end *******************/
 /************************ end page css for lower score ************/
 .end_low_template .end_content .content_text_img{
-    width: 320px;
+    width: 90%;
     height: 25px;
 
     position: absolute;
     top: 50%;
     margin-top: -14px;
+      left: 50%;
+  margin-left: -45%;
+
 }
 /************************ end page css for lower score ************/
 /************************ end page css for middle score ************/
 .end_middle_template .end_content .content_text_img{
-    width: 320px;
+    width: 90%;
     height: 44px;
 
     position: absolute;
     top: 50%;
     margin-top: -22px;
+      left: 50%;
+  margin-left: -45%;
+
 }
 
 .end_middle_template .end_content .content_text{
@@ -1375,11 +1381,14 @@ left: 38px;
 /************************ end page css for middle score ************/
 /************************ end page css for high score ************/
 .end_high_template .end_content .content_text_img{
-    width: 320px;
+    width: 90%;
     height: 89px;
 
     position: absolute;
     top: 50%;
+      left: 50%;
+  margin-left: -45%;
+
 }
 
 .end_high_template .end_content .content_text{
@@ -1427,11 +1436,11 @@ left: 38px;
 
 
 .download_button_ios{
-    top: 216px;
+    top: 32%;
 }
 
 .download_button_and{
-    top: 344px;
+    top: 52%;
 }
 
 .download_cover{
